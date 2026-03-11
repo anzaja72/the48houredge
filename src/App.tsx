@@ -56,7 +56,7 @@ export default function App() {
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' })} className="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">EL MÉTODO</button>
             <button onClick={() => document.getElementById('valor')?.scrollIntoView({ behavior: 'smooth' })} className="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">EL VALOR</button>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-primary px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(201,63,53,0.3)]">
               Agendar Asesoría
             </a>
           </div>
@@ -71,7 +71,7 @@ export default function App() {
           <div className="md:hidden absolute top-full left-0 w-full bg-primary border-t border-white/10 p-4 flex flex-col gap-4 shadow-xl">
             <button onClick={() => { document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-white text-left py-2 font-medium">El Método</button>
             <button onClick={() => { document.getElementById('valor')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-white text-left py-2 font-medium">El Valor</button>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-accent text-primary px-6 py-3 rounded-full font-semibold w-full text-center mt-2 block">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-accent text-white px-6 py-3 rounded-full font-semibold w-full text-center mt-2 block">
               Agendar Asesoría
             </a>
           </div>
@@ -101,9 +101,9 @@ export default function App() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 backdrop-blur-sm mb-8">
-                <MapPin size={16} className="text-accent" />
-                <span className="text-accent text-sm font-medium tracking-widest uppercase">Hotel Waya Guajira</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-background/30 bg-background/10 backdrop-blur-sm mb-8">
+                <MapPin size={16} className="text-background" />
+                <span className="text-background text-sm font-medium tracking-widest uppercase">Hotel Waya Guajira</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-serif font-bold text-white leading-[1.1] mb-6">
@@ -115,7 +115,7 @@ export default function App() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-primary px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(201,63,53,0.4)] flex items-center justify-center gap-2">
                   QUIERO RECUPERAR MI VENTAJA
                   <ArrowRight size={20} />
                 </a>
@@ -226,7 +226,7 @@ export default function App() {
             <FadeIn delay={0.2} className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden relative">
                 <img 
-                  src="https://i.imgur.com/bQHW4gD.jpg" 
+                  src="https://i.imgur.com/AcCjHta.jpg" 
                   alt="Meditación y claridad" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -297,7 +297,7 @@ export default function App() {
                 </div>
                 <div className="mt-6 sm:mt-0 text-center sm:text-right">
                   <p className="text-accent font-bold text-xl mb-2">Tu Inversión Hoy</p>
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent hover:bg-accent/90 text-primary px-8 py-3 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(201,63,53,0.3)]">
                     Ver Oferta Especial
                   </a>
                 </div>
@@ -386,7 +386,7 @@ export default function App() {
               <h3 className="text-2xl font-bold text-primary mb-2">Asegura tu lugar hoy</h3>
               <p className="text-text-secondary mb-8">Reserva tu plaza con el 50% y comienza tu preparación.</p>
               
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(10,37,64,0.2)] flex items-center justify-center gap-3 mb-4">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(86,35,24,0.2)] flex items-center justify-center gap-3 mb-4">
                 QUIERO RECUPERAR MI VENTAJA
                 <ArrowRight size={24} className="text-accent" />
               </a>
