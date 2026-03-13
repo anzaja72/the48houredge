@@ -47,10 +47,10 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center shadow-md">
-              <img src="https://i.imgur.com/nSJE6Ew.png" alt="Logo" className="w-6 h-6 object-contain" />
+              <img src="https://i.imgur.com/nSJE6Ew.png" alt="Logo" className="w-9 h-9 object-contain" />
             </div>
             <span className={`font-serif font-bold text-xl tracking-wide ${isScrolled ? 'text-white' : 'text-white'}`}>
-              THE 48-HOUR EDGE
+              El despertar de la Luna Grande
             </span>
           </div>
           
@@ -314,8 +314,7 @@ export default function App() {
                 {[
                   { title: "Alojamiento Premium Todo Incluido (2 noches - 3 dias):", desc: "Dormirás en un santuario de sostenibilidad y confort.", val: "$1.940.000 COP" },
                   { title: "Protocolo de Alimentación 'YOOTOO' & 'KAI'", desc: "Nutrición diseñada para desinflamar el cerebro y aumentar la energía.", val: "$600.000 COP" },
-                  { title: "Ceremonia 'Fuego de Intención' y Terapia de Sonido", desc: "Herramientas ancestrales para eliminar bloqueos mentales.", val: "$800.000 COP" },
-                  { title: "Transporte Privado VIP (Aeropuerto - Hotel - Aeropuerto)", desc: "Cero fricción. Nosotros nos encargamos de todo desde que aterrizas.", val: "$350.000 COP" }
+                  { title: "Ceremonia 'Fuego de Intención' y Terapia de Sonido", desc: "Herramientas ancestrales para eliminar bloqueos mentales.", val: "$800.000 COP" }
                 ].map((item, i) => (
                   <FadeIn key={i} delay={i * 0.1} className="flex flex-col sm:flex-row sm:items-center justify-between p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-accent/30 transition-colors">
                     <div className="flex items-start gap-4 mb-4 sm:mb-0">
@@ -461,9 +460,9 @@ export default function App() {
       <footer className="bg-primary border-t border-white/10 py-12 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
-            <img src="https://i.imgur.com/nSJE6Ew.png" alt="Logo" className="w-7 h-7 object-contain opacity-80" />
+            <img src="https://i.imgur.com/nSJE6Ew.png" alt="Logo" className="w-10 h-10 object-contain opacity-80" />
           </div>
-          <p className="text-white/60 font-serif text-lg mb-2">THE 48-HOUR EDGE</p>
+          <p className="text-white/60 font-serif text-lg mb-2">El despertar de la Luna Grande</p>
           <p className="text-white/40 text-sm">© {new Date().getFullYear()} Hotel Waya Guajira. Todos los derechos reservados.</p>
         </div>
       </footer>
