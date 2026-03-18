@@ -45,3 +45,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 30s) linear infinite;
+}

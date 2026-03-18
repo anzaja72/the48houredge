@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { InfiniteSlider } from './components/ui/infinite-slider';
+import { LogoCarousel } from './components/ui/logo-carousel';
 import { 
   ArrowRight, 
   Brain, 
-  Battery, 
+  Smartphone, 
   Clock, 
   CheckCircle2, 
   ShieldCheck, 
@@ -38,7 +38,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappUrl = "https://wa.me/573108410730?text=Hola,%20quiero%20reservar%20mi%20plaza%20en%20The%2048-Hour%20Edge.";
+  const whatsappUrl = "https://wa.me/573102725926?text=Hola,%20quiero%20reservar%20mi%20plaza%20en%20The%2048-Hour%20Edge.";
 
   return (
     <div className="min-h-screen bg-background font-sans text-text-primary overflow-x-hidden">
@@ -50,7 +50,7 @@ export default function App() {
               <img src="https://i.imgur.com/nSJE6Ew.png" alt="Logo" className="w-9 h-9 object-contain" />
             </div>
             <span className={`font-serif font-bold text-xl tracking-wide ${isScrolled ? 'text-white' : 'text-white'}`}>
-              El despertar de la Luna Grande
+            Despertar de Luna Grande
             </span>
           </div>
           
@@ -80,7 +80,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex items-center pt-20 pb-16 overflow-hidden bg-primary">
+      <section className="relative min-h-[100svh] flex items-center pt-32 md:pt-40 pb-16 overflow-hidden bg-primary">
         {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0">
           <video 
@@ -102,17 +102,20 @@ export default function App() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-background/30 bg-background/10 backdrop-blur-sm mb-8">
-                <MapPin size={16} className="text-background" />
-                <span className="text-background text-sm font-medium tracking-widest uppercase">Hotel Waya Guajira</span>
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-background/30 bg-background/10 backdrop-blur-sm mb-8">
+                <MapPin size={20} className="text-background" />
+                <div className="flex flex-col text-left">
+                  <span className="text-background text-sm font-medium tracking-widest uppercase">Hotel Waya Guajira</span>
+                  <span className="text-background/80 text-xs font-medium tracking-widest uppercase mt-0.5">del 1 al 3 de mayo 2026</span>
+                </div>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-serif font-bold text-white leading-[1.1] mb-6">
-                Lidere con Claridad Absoluta: <span className="text-gradient">48 Horas de Recalibración Estratégica con la Luna Wesak.</span>
+                Lidera con claridad absoluta: <span className="text-gradient">48 Horas de inmersión para disolver el ruido mental.</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-12 max-w-3xl mx-auto">
-                Silencie el ruido, reconecte con su visión y lidere con la claridad de quien ya ha conquistado el éxito. A través de un viaje de transformación y bienestar diseñado exclusivamente para empresarios y lideres de alto rendimiento que no pueden permitirse 15 dias de vacaciones, pero necesitan un “reinicio” biológico y mental inmendiato.
+                El Despertar de Luna Grande es la ventana de mayor claridad del año. Silencie el ruido, reconecte con su visión y lidere desde la certeza de quien ya ha conquistado el éxito. Un protocolo de inmersión diseñado exclusivamente para líderes de alto rendimiento.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -134,39 +137,15 @@ export default function App() {
             EMPRESAS QUE NOS RESPALDAN
           </p>
         </div>
-        <InfiniteSlider gap={48} speed={25} className="w-full bg-white">
-          <img
-            src="https://i.imgur.com/tmmX8SH.png"
-            alt="Logo 1"
-            className="h-[60px] w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
-          />
-          <img
-            src="https://i.imgur.com/owbahYd.png"
-            alt="Logo 2"
-            className="h-[60px] w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
-          />
-          <img
-            src="https://i.imgur.com/3lwVYlv.png"
-            alt="Logo 3"
-            className="h-[60px] w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
-          />
-          {/* Repeat logos to ensure the slider is wide enough */}
-          <img
-            src="https://i.imgur.com/tmmX8SH.png"
-            alt="Logo 1"
-            className="h-[60px] w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
-          />
-          <img
-            src="https://i.imgur.com/owbahYd.png"
-            alt="Logo 2"
-            className="h-[60px] w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
-          />
-          <img
-            src="https://i.imgur.com/3lwVYlv.png"
-            alt="Logo 3"
-            className="h-[60px] w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
-          />
-        </InfiniteSlider>
+        <LogoCarousel 
+          logos={[
+            { id: 1, name: 'Logo 1', image: 'https://i.imgur.com/tmmX8SH.png' },
+            { id: 2, name: 'Logo 2', image: 'https://i.imgur.com/owbahYd.png' },
+            { id: 3, name: 'Logo 3', image: 'https://i.imgur.com/3lwVYlv.png' },
+            { id: 4, name: 'Logo 4', image: 'https://i.imgur.com/7yoAGot.png' }
+          ]} 
+          speed={25} 
+        />
       </section>
 
       {/* Problem Agitation */}
@@ -194,7 +173,7 @@ export default function App() {
 
             <FadeIn delay={0.2} className="glass-card p-8 rounded-2xl">
               <div className="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center mb-6">
-                <Battery className="text-primary" size={28} />
+                <Smartphone className="text-primary" size={28} />
               </div>
               <h3 className="text-xl font-bold text-primary mb-4">Ruido Digital</h3>
               <p className="text-text-secondary leading-relaxed">
@@ -233,10 +212,10 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 uppercase">
-                Presentamos el <span className="text-accent">DESPERTAR DE LA LUNA GRANDE</span>
+                Presentamos El <span className="text-accent">DESPERTAR DE LUNA GRANDE</span>
               </h2>
               <p className="text-xl text-white/80 mb-10 leading-relaxed">
-                La experiencia que combina la sabiduría Wayuu y frecuencias del sonido para aprovechar la ventana energética más importante del año, llevándote a un estado de calma, coherencia y expansión.
+                La experiencia que combina la sabiduría Wayuú y frecuencias del sonido para aprovechar la ventana energética más importante del año, llevándote a un estado de calma, coherencia y expansión.
               </p>
 
               <div className="space-y-8">
@@ -244,14 +223,14 @@ export default function App() {
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/20 border border-accent/50 flex items-center justify-center text-accent font-bold text-xl">1</div>
                   <div>
                     <h3 className="text-2xl font-serif font-bold mb-2">Día 1: Reset estratégico de desconexión y alta vibración.</h3>
-                    <p className="text-white/70">Bajo la luz de la luna Wesak se realiza la ceremonia de Iluminación con una sesión de Gong de alta frecuencia para eliminar el cortisol (hormona del estrés) y resetear el sistema nervioso.</p>
+                    <p className="text-white/70">Bajo la luz de la luna Wesak se realiza la ceremonia de Iluminación con una sesión de Gong de alta frecuencia para reducir el cortisol (hormona del estrés) y resetear el sistema nervioso.</p>
                   </div>
                 </div>
                 
                 <div className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/20 border border-accent/50 flex items-center justify-center text-accent font-bold text-xl">2</div>
                   <div>
-                    <h3 className="text-2xl font-serif font-bold mb-2">Día 2: RECALIBRACIÓN DE LOS 4 ELEMENTOS</h3>
+                    <h3 className="text-2xl font-serif font-bold mb-2">Día 2: Recalibracion de los 4 Elementos.</h3>
                     <p className="text-white/70">Una metodología de 4 fases para reconectar con su propósito, potenciar su resiliencia ante la incertidumbre y eliminar el ruido mental que le impide tomar decisiones estratégicas.</p>
                   </div>
                 </div>
@@ -259,7 +238,7 @@ export default function App() {
                 <div className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/20 border border-accent/50 flex items-center justify-center text-accent font-bold text-xl">3</div>
                   <div>
-                    <h3 className="text-2xl font-serif font-bold mb-2">Día 3: El Renacer y la integración de la práctica</h3>
+                    <h3 className="text-2xl font-serif font-bold mb-2">Día 3: El Renacer y la integración de la práctica.</h3>
                     <p className="text-white/70">Sentirás que invertiste 3 días para ganar 12 meses de claridad, enfoque y pensamientos con intención y propósito.</p>
                   </div>
                 </div>
@@ -301,7 +280,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
-              El Valor de tu Claridad
+              El Valor de tu Claridad Incluye:
             </h2>
             <p className="text-xl text-text-secondary">
               Todo lo que necesitas para un reinicio total, sin fricciones.
@@ -312,9 +291,9 @@ export default function App() {
             <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
               <div className="p-8 md:p-10 space-y-6">
                 {[
-                  { title: "Alojamiento Premium Todo Incluido (2 noches - 3 dias):", desc: "Dormirás en un santuario de sostenibilidad y confort.", val: "$1.940.000 COP" },
-                  { title: "Protocolo de Alimentación 'YOOTOO' & 'KAI'", desc: "Nutrición diseñada para desinflamar el cerebro y aumentar la energía.", val: "$600.000 COP" },
-                  { title: "Ceremonia 'Fuego de Intención' y Terapia de Sonido", desc: "Herramientas ancestrales para eliminar bloqueos mentales.", val: "$800.000 COP" }
+                  { title: "Alojamiento En el hotel Waya (2 noches - 3 dias):", desc: "Dormirás en un santuario de sostenibilidad y confort." },
+                  { title: "Protocolo de Alimentación 'YOOTOO' & 'KAI'", desc: "Nutrición diseñada para desinflamar el cerebro y aumentar la energía: Desayuno, almuerzo, cena y bebidas." },
+                  { title: "Ceremonia, talleres y terapias de sonido", desc: "Baño de gong (Terapia de frecuencias de sonido, ceremonia fuego de intención, taller 'Conexion con los 4 Elementos')." }
                 ].map((item, i) => (
                   <FadeIn key={i} delay={i * 0.1} className="flex flex-col sm:flex-row sm:items-center justify-between p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-accent/30 transition-colors">
                     <div className="flex items-start gap-4 mb-4 sm:mb-0">
@@ -324,10 +303,6 @@ export default function App() {
                         <p className="text-text-secondary text-sm mt-1">{item.desc}</p>
                       </div>
                     </div>
-                    <div className="sm:text-right pl-12 sm:pl-0">
-                      <span className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Valor</span>
-                      <p className="font-mono font-bold text-primary">{item.val}</p>
-                    </div>
                   </FadeIn>
                 ))}
               </div>
@@ -335,15 +310,16 @@ export default function App() {
               <div className="bg-primary p-8 md:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between">
                 <div>
                   <p className="text-white/80 text-lg">Valor Total Real:</p>
-                  <p className="text-3xl md:text-4xl font-serif font-bold text-white line-through opacity-70">$3.690.000 COP</p>
+                  <p className="text-3xl md:text-4xl font-serif font-bold text-white mb-1">$3.880.000 COP</p>
+                  <p className="text-white/60 text-sm">Valor para dos personas.</p>
                 </div>
                 <div className="mt-6 sm:mt-0 text-center sm:text-right">
-                  <p className="text-accent font-bold text-xl mb-2">Tu Inversión Hoy</p>
+                  <p className="text-accent font-bold text-xl mb-2">Si aplicas Hoy:</p>
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(201,63,53,0.3)]">
-                    Ver Oferta Especial
+                    Obtén 50% de descuento
                   </a>
                   <p className="text-white/60 text-xs mt-3 max-w-xs mx-auto sm:ml-auto sm:mr-0 italic">
-                    "Al hacer clic, agendarás una breve llamada de validación para asegurar que este protocolo es el fit adecuado para tus objetivos actuales."
+                    "Al hacer clic, obtendras acceso al descuento y bonos adicionales."
                   </p>
                 </div>
               </div>
@@ -357,7 +333,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
-              Guiados por Expertos
+               Facilitadores Expertos
             </h2>
           </FadeIn>
 
@@ -368,7 +344,7 @@ export default function App() {
               </div>
               <h3 className="text-2xl font-serif font-bold text-primary mb-4">Xiomara Pedreros</h3>
               <p className="text-text-secondary leading-relaxed italic text-sm">
-                “Con 30 años de trayectoria, mi enfoque no es la terapia convencional, sino la recalibración de sistemas personales por medio del sonido. Utilizo instrumentos sonoros de alta frecuencia y la biodescodificación transgeneracional para identificar y eliminar los bloqueos invisibles que frenan la toma de decisiones. Mi intervención limpia el ruido de su biología y su historia, permitiéndole liderar desde la claridad absoluta, no desde el agotamiento”
+                “Con 30 años de trayectoria, mi enfoque no es la terapia convencional, sino la recalibración de sistemas personales por medio del sonido. Utiliza instrumentos sonoros de alta frecuencia y la biodescodificación transgeneracional para identificar y eliminar los bloqueos invisibles que frenan la toma de decisiones.”
               </p>
             </FadeIn>
 
@@ -378,17 +354,17 @@ export default function App() {
               </div>
               <h3 className="text-2xl font-serif font-bold text-primary mb-4">León Darío Montoya</h3>
               <p className="text-text-secondary leading-relaxed italic text-sm">
-                "No solo soy un Maestro del Gong formado por el Instituto Internacional de Terapia de Sonido; soy Abogado y Empresario. Esta dualidad me permite entender el peso real de la responsabilidad corporativa. Bajo la mentoría directa de Vickrampal (Fundación de Musicoterapia de Madrid), utilizo el sonido no como un ritual, sino como una herramienta técnica de precisión para resetear el sistema nervioso de quienes, como yo, sostenemos grandes responsabilidades sobre los hombros."
+                "No solo es Maestro del Gong formado por el Instituto Internacional de Terapia de Sonido; soy Abogado y Empresario. Esta dualidad le permite entender el peso real de la responsabilidad corporativa. Bajo la mentoría directa de Vickrampal (Fundación de Musicoterapia de Madrid), utilizo el sonido no como un ritual, sino como una herramienta técnica de precisión."
               </p>
             </FadeIn>
 
             <FadeIn delay={0.3} className="bg-gray-50 p-8 rounded-3xl border border-gray-100 flex flex-col items-center text-center">
               <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
-                <img src="https://i.imgur.com/F6IMlfM.jpg" alt="Gloria" className="w-full h-full object-cover" />
+                <img src="https://i.imgur.com/F6IMlfM.jpg" alt="Gloria Eugenia López" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Gloria</h3>
+              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Gloria Eugenia López</h3>
               <p className="text-text-secondary leading-relaxed italic text-sm">
-                "Especialista en integración de bienestar corporativo y reconexión energética. Mi propósito es acompañar a líderes en su proceso de recalibración, asegurando que la experiencia del retiro se traduzca en una transformación sostenible. A través de prácticas de mindfulness y alineación de propósitos, facilito el puente entre la claridad mental obtenida y su aplicación práctica en entornos de alta exigencia."
+                "Especialista en integración de bienestar corporativo y reconexión energética. Su propósito es acompañar a líderes en su proceso de recalibración. A través de prácticas de mindfulness y alineación de propósitos, facilita el puente entre la claridad mental obtenida y su aplicación práctica en entornos de alta exigencia."
               </p>
             </FadeIn>
           </div>
@@ -443,7 +419,7 @@ export default function App() {
               <p className="text-text-secondary mb-8">Reserva tu plaza con el 50% y comienza tu preparación.</p>
               
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(86,35,24,0.2)] flex items-center justify-center gap-3 mb-4">
-                QUIERO APLICAR AL PROTOCOLO WESAK
+                QUIERO APLICAR AL DESPERTAR DE LUNA GRANDE
                 <ArrowRight size={24} className="text-accent" />
               </a>
               
@@ -462,7 +438,7 @@ export default function App() {
           <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
             <img src="https://i.imgur.com/nSJE6Ew.png" alt="Logo" className="w-10 h-10 object-contain opacity-80" />
           </div>
-          <p className="text-white/60 font-serif text-lg mb-2">El despertar de la Luna Grande</p>
+          <p className="text-white/60 font-serif text-lg mb-2">Despertar de Luna Grande</p>
           <p className="text-white/40 text-sm">© {new Date().getFullYear()} Hotel Waya Guajira. Todos los derechos reservados.</p>
         </div>
       </footer>
