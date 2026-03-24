@@ -38,7 +38,8 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappUrl = "https://wa.me/573102725926?text=Hola,%20quiero%20reservar%20mi%20plaza%20en%20The%2048-Hour%20Edge.";
+  const whatsappMessage = encodeURIComponent('Quiero mas información del "Despertar de Luna Grande"');
+  const whatsappUrl = `https://wa.me/573102725926?text=${whatsappMessage}`;
 
   return (
     <div className="min-h-screen bg-background font-sans text-text-primary overflow-x-hidden">
