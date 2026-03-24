@@ -43,7 +43,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background font-sans text-text-primary overflow-x-hidden">
       {/* Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/95 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center shadow-md">
@@ -57,7 +57,7 @@ export default function App() {
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' })} className="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">EL MÉTODO</button>
             <button onClick={() => document.getElementById('valor')?.scrollIntoView({ behavior: 'smooth' })} className="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">EL VALOR</button>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(201,63,53,0.3)]">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(232,194,116,0.3)]">
               Agendar Asesoría
             </a>
           </div>
@@ -69,7 +69,7 @@ export default function App() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-primary border-t border-white/10 p-4 flex flex-col gap-4 shadow-xl">
+          <div className="md:hidden absolute top-full left-0 w-full bg-background border-t border-white/10 p-4 flex flex-col gap-4 shadow-xl">
             <button onClick={() => { document.getElementById('metodo')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-white text-left py-2 font-medium">El Método</button>
             <button onClick={() => { document.getElementById('valor')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-white text-left py-2 font-medium">El Valor</button>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-accent text-white px-6 py-3 rounded-full font-semibold w-full text-center mt-2 block">
@@ -80,7 +80,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex items-center pt-32 md:pt-40 pb-16 overflow-hidden bg-primary">
+      <section className="relative min-h-[100svh] flex items-center pt-32 md:pt-40 pb-16 overflow-hidden bg-background">
         {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0">
           <video 
@@ -92,7 +92,7 @@ export default function App() {
           >
             <source src="https://i.imgur.com/3RO9lx2.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -119,7 +119,7 @@ export default function App() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(201,63,53,0.4)] flex items-center justify-center gap-2">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(232,194,116,0.4)] flex items-center justify-center gap-2">
                   Aplicar para el Protocolo de Luna Wesak
                   <ArrowRight size={20} />
                 </a>
@@ -131,9 +131,9 @@ export default function App() {
       </section>
 
       {/* Logos Carousel */}
-      <section className="py-12 bg-white border-b border-gray-100 overflow-hidden">
+      <section className="py-12 bg-primary border-b border-white/10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-          <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest">
+          <p className="text-sm font-semibold text-white/60 uppercase tracking-widest">
             EMPRESAS QUE NOS RESPALDAN
           </p>
         </div>
@@ -152,7 +152,7 @@ export default function App() {
       <section className="py-24 bg-background relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-accent mb-6">
               ¿Sientes que estás operando al 30% de tu capacidad?
             </h2>
             <p className="text-xl text-text-secondary">
@@ -162,20 +162,20 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <FadeIn delay={0.1} className="glass-card p-8 rounded-2xl">
-              <div className="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center mb-6">
-                <Brain className="text-primary" size={28} />
+              <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mb-6">
+                <Brain className="text-secondary" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-4">Decisiones Lentas</h3>
+              <h3 className="text-xl font-bold text-accent mb-4">Decisiones Lentas</h3>
               <p className="text-text-secondary leading-relaxed">
                 Tomas decisiones más lento que hace un año. La niebla mental te impide ver con claridad el panorama completo de tu negocio.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.2} className="glass-card p-8 rounded-2xl">
-              <div className="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center mb-6">
-                <Smartphone className="text-primary" size={28} />
+              <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mb-6">
+                <Smartphone className="text-secondary" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-4">Ruido Digital</h3>
+              <h3 className="text-xl font-bold text-accent mb-4">Ruido Digital</h3>
               <p className="text-text-secondary leading-relaxed">
                 El constante bombardeo de información y notificaciones no te deja ver el siguiente gran paso estratégico.
               </p>
@@ -183,10 +183,10 @@ export default function App() {
 
             <FadeIn delay={0.3} className="glass-card p-8 rounded-2xl border-accent/30 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full -z-10"></div>
-              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                <Clock className="text-accent" size={28} />
+              <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mb-6">
+                <Clock className="text-secondary" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-4">Burnout sin Tiempo</h3>
+              <h3 className="text-xl font-bold text-accent mb-4">Burnout sin Tiempo</h3>
               <p className="text-text-secondary leading-relaxed">
                 Estás "quemado", pero tu agenda no te permite desaparecer en un retiro espiritual de un mes en la India.
               </p>
@@ -253,7 +253,7 @@ export default function App() {
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
                 
                 <div className="absolute bottom-8 left-8 right-8 dark-glass-card p-6 rounded-xl">
                   <p className="text-white/90 italic font-serif text-lg mb-4">
@@ -279,7 +279,7 @@ export default function App() {
       <section id="valor" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-accent mb-6">
               El Valor de tu Claridad Incluye:
             </h2>
             <p className="text-xl text-text-secondary">
@@ -288,18 +288,18 @@ export default function App() {
           </FadeIn>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+            <div className="bg-primary rounded-3xl shadow-xl border border-white/10 overflow-hidden">
               <div className="p-8 md:p-10 space-y-6">
                 {[
                   { title: "Alojamiento En el hotel Waya (2 noches - 3 dias):", desc: "Dormirás en un santuario de sostenibilidad y confort." },
                   { title: "Protocolo de Alimentación 'YOOTOO' & 'KAI'", desc: "Nutrición diseñada para desinflamar el cerebro y aumentar la energía: Desayuno, almuerzo, cena y bebidas." },
                   { title: "Ceremonia, talleres y terapias de sonido", desc: "Baño de gong (Terapia de frecuencias de sonido, ceremonia fuego de intención, taller 'Conexion con los 4 Elementos')." }
                 ].map((item, i) => (
-                  <FadeIn key={i} delay={i * 0.1} className="flex flex-col sm:flex-row sm:items-center justify-between p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-accent/30 transition-colors">
+                  <FadeIn key={i} delay={i * 0.1} className="flex flex-col sm:flex-row sm:items-center justify-between p-6 rounded-2xl bg-background/50 border border-white/10 hover:border-accent/30 transition-colors">
                     <div className="flex items-start gap-4 mb-4 sm:mb-0">
                       <CheckCircle2 className="text-accent flex-shrink-0 mt-1" size={24} />
                       <div>
-                        <h4 className="font-bold text-lg text-primary">{item.title}</h4>
+                        <h4 className="font-bold text-lg text-accent">{item.title}</h4>
                         <p className="text-text-secondary text-sm mt-1">{item.desc}</p>
                       </div>
                     </div>
@@ -307,7 +307,7 @@ export default function App() {
                 ))}
               </div>
               
-              <div className="bg-primary p-8 md:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between">
+              <div className="bg-background p-8 md:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between">
                 <div>
                   <p className="text-white/80 text-lg">Valor Total Real:</p>
                   <p className="text-3xl md:text-4xl font-serif font-bold text-white mb-1">$3.880.000 COP</p>
@@ -315,7 +315,7 @@ export default function App() {
                 </div>
                 <div className="mt-6 sm:mt-0 text-center sm:text-right">
                   <p className="text-accent font-bold text-xl mb-2">Si aplicas Hoy:</p>
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(201,63,53,0.3)]">
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(232,194,116,0.3)]">
                     Obtén 50% de descuento
                   </a>
                   <p className="text-white/60 text-xs mt-3 max-w-xs mx-auto sm:ml-auto sm:mr-0 italic">
@@ -329,40 +329,40 @@ export default function App() {
       </section>
 
       {/* Facilitadores */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-24 bg-background border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-accent mb-6">
                Facilitadores Expertos
             </h2>
           </FadeIn>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <FadeIn delay={0.1} className="bg-gray-50 p-8 rounded-3xl border border-gray-100 flex flex-col items-center text-center">
-              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+            <FadeIn delay={0.1} className="bg-primary p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center">
+              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white/10 shadow-lg">
                 <img src="https://i.imgur.com/X5HYxSp.jpg" alt="Xiomara Pedreros" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Xiomara Pedreros</h3>
+              <h3 className="text-2xl font-serif font-bold text-accent mb-4">Xiomara Pedreros</h3>
               <p className="text-text-secondary leading-relaxed italic text-sm">
                 “Con 30 años de trayectoria, mi enfoque no es la terapia convencional, sino la recalibración de sistemas personales por medio del sonido. Utiliza instrumentos sonoros de alta frecuencia y la biodescodificación transgeneracional para identificar y eliminar los bloqueos invisibles que frenan la toma de decisiones.”
               </p>
             </FadeIn>
 
-            <FadeIn delay={0.2} className="bg-gray-50 p-8 rounded-3xl border border-gray-100 flex flex-col items-center text-center">
-              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+            <FadeIn delay={0.2} className="bg-primary p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center">
+              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white/10 shadow-lg">
                 <img src="https://i.imgur.com/vJ77zt3.jpg" alt="León Darío Montoya Piedrahita" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">León Darío Montoya</h3>
+              <h3 className="text-2xl font-serif font-bold text-accent mb-4">León Darío Montoya</h3>
               <p className="text-text-secondary leading-relaxed italic text-sm">
                 "No solo es Maestro del Gong formado por el Instituto Internacional de Terapia de Sonido; soy Abogado y Empresario. Esta dualidad le permite entender el peso real de la responsabilidad corporativa. Bajo la mentoría directa de Vickrampal (Fundación de Musicoterapia de Madrid), utilizo el sonido no como un ritual, sino como una herramienta técnica de precisión."
               </p>
             </FadeIn>
 
-            <FadeIn delay={0.3} className="bg-gray-50 p-8 rounded-3xl border border-gray-100 flex flex-col items-center text-center">
-              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+            <FadeIn delay={0.3} className="bg-primary p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center">
+              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white/10 shadow-lg">
                 <img src="https://i.imgur.com/F6IMlfM.jpg" alt="Gloria Eugenia López" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Gloria Eugenia López</h3>
+              <h3 className="text-2xl font-serif font-bold text-accent mb-4">Gloria Eugenia López</h3>
               <p className="text-text-secondary leading-relaxed italic text-sm">
                 "Especialista en integración de bienestar corporativo y reconexión energética. Su propósito es acompañar a líderes en su proceso de recalibración. A través de prácticas de mindfulness y alineación de propósitos, facilita el puente entre la claridad mental obtenida y su aplicación práctica en entornos de alta exigencia."
               </p>
@@ -402,7 +402,7 @@ export default function App() {
             className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-primary/90"></div>
+          <div className="absolute inset-0 bg-background/90"></div>
         </div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -414,17 +414,17 @@ export default function App() {
               El costo de la inacción es mayor que el costo de esta inversión. El mercado no espera a los que dudan.
             </p>
             
-            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-primary mb-2">Asegura tu lugar hoy</h3>
+            <div className="bg-primary p-8 md:p-12 rounded-3xl shadow-2xl border border-white/10 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-accent mb-2">Asegura tu lugar hoy</h3>
               <p className="text-text-secondary mb-8">Reserva tu plaza con el 50% y comienza tu preparación.</p>
               
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(86,35,24,0.2)] flex items-center justify-center gap-3 mb-4">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-background hover:bg-background/90 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center gap-3 mb-4">
                 QUIERO APLICAR AL DESPERTAR DE LUNA GRANDE
                 <ArrowRight size={24} className="text-accent" />
               </a>
               
-              <div className="flex items-center justify-center gap-2 text-sm text-gray-500 font-medium">
-                <ShieldCheck size={16} className="text-green-600" />
+              <div className="flex items-center justify-center gap-2 text-sm text-white/60 font-medium">
+                <ShieldCheck size={16} className="text-secondary" />
                 <span>Pago 100% seguro y garantizado</span>
               </div>
             </div>
@@ -433,7 +433,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary border-t border-white/10 py-12 text-center">
+      <footer className="bg-background border-t border-white/10 py-12 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
             <img src="https://i.imgur.com/nSJE6Ew.png" alt="Logo" className="w-10 h-10 object-contain opacity-80" />
