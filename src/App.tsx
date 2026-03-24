@@ -111,7 +111,7 @@ export default function App() {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-serif font-bold text-white leading-[1.1] mb-6">
-                Lidera con claridad absoluta: <span className="text-gradient">48 Horas de inmersión para disolver el ruido mental.</span>
+                Lidera con claridad absoluta: <span className="text-gradient">Tres días de meditación y terapias de sonido para renovar cuerpo, y mente y energía.</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-12 max-w-3xl mx-auto">
