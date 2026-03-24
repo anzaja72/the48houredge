@@ -102,11 +102,11 @@ export default function App() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-background/30 bg-background/10 backdrop-blur-sm mb-8">
-                <MapPin size={20} className="text-background" />
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-accent/30 bg-accent/10 backdrop-blur-sm mb-8">
+                <MapPin size={20} className="text-accent" />
                 <div className="flex flex-col text-left">
-                  <span className="text-background text-sm font-medium tracking-widest uppercase">Hotel Waya Guajira</span>
-                  <span className="text-background/80 text-xs font-medium tracking-widest uppercase mt-0.5">del 1 al 3 de mayo 2026</span>
+                  <span className="text-accent text-sm font-medium tracking-widest uppercase">Hotel Waya Guajira</span>
+                  <span className="text-accent/80 text-xs font-medium tracking-widest uppercase mt-0.5">del 1 al 3 de mayo 2026</span>
                 </div>
               </div>
               
